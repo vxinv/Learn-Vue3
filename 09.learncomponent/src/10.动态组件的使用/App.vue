@@ -1,10 +1,10 @@
 <template>
   <div>
     <button
-      v-for="item in tabs"
-      :key="item"
-      @click="itemClick(item)"
-      :class="{ active: currentTab === item }"
+        v-for="item in tabs"
+        :key="item"
+        :class="{ active: currentTab === item }"
+        @click="itemClick(item)"
     >
       {{ item }}
     </button>
@@ -32,14 +32,14 @@
     ></component> -->
 
     <!-- keep-alive -->
-    <keep-alive include="about,home"
-      ><component
-        :is="currentTab"
-        name="tjx"
-        :age="18"
-        @pageClick="pageaClick"
-      ></component
-    ></keep-alive>
+    <keep-alive include="about,home">
+      <component
+          :is="currentTab"
+          :age="18"
+          name="tjx"
+          @pageClick="pageaClick"
+      ></component>
+    </keep-alive>
   </div>
 </template>
 
@@ -47,6 +47,7 @@
 import Home from "./pages/Home.vue";
 import Category from "./pages/Category.vue";
 import About from "./pages/About.vue";
+
 export default {
   data() {
     return {

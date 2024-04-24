@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 // @ts-ignore
-import App from './16.结合第三方库使用动画/App.vue'
+import App from './10.动态组件的使用/App.vue'
 
 import "animate.css"
 

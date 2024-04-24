@@ -22,6 +22,7 @@ import NavBar from "./NavBar.vue"
         console.log(this.$refs.haha);
         console.log(this.$refs.navBar.message);
         this.$refs.navBar.sayHello();
+        this.$refs.navBar.$props
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-for="item,index in names" :key="item">
+    <template v-for="(item, index) in names" :key="item">
       <slot :item="item" :index="index"></slot>
     </template>
   </div>

@@ -4,6 +4,7 @@
     <!-- <show-message title="hhaha" content="dfls"></show-message> -->
     <!-- 方式二：父组件注册一些自定义的attribute传递data中的数据，如数组、对象等类型，子组件通过props接受 -->
     <show-message :title="title" :content="content"></show-message>
+    <ShowMessage/>
   </div>
 </template>
 
