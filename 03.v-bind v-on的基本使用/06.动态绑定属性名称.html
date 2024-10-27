@@ -12,7 +12,7 @@
 
   <template id="my-app">
     <!-- 通过 :[属性名]="属性值" -->
-    <div :[sxName]="sxValue">的说法</div>
+      <div :[sxName]="sxValue">:[属性名]="属性值"</div>
   </template>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -22,7 +22,7 @@
       data() {
         return {
           message: "0",
-          sxName: 'asd',
+            sxName: 'assign',
           sxValue: "23"
         }
       }

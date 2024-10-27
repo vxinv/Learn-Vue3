@@ -1,15 +1,15 @@
 <template>
   <div>
     <h2>app</h2>
-    <helloworld></helloworld>
+    <HelloWorld></HelloWorld>
   </div>
 </template>
 
 <script>
-import Helloworld from "./Helloworld.vue"
+import HelloWorld from "./Helloworld.vue"
   export default {
     components: {
-      Helloworld
+      HelloWorld
     }
     
   }

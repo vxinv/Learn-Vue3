@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h2>{{ title }}</h2>
-    <h2>{{ content.name }}</h2>
-    <h2>{{ content.age }}</h2>
+    <h2>template</h2>
+    <h2>标题：{{ title }}</h2>
+    <h2>姓名：{{ content.name }}</h2>
+    <h2>年纪：{{ content.age }}</h2>
   </div>
 </template>
 
