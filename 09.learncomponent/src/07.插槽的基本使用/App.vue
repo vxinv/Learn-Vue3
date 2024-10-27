@@ -2,11 +2,13 @@
   <div>
     <!-- 基本使用: 直接插入内容 -->
     <my-slog-cpn>
+      <text>传入1个按钮</text>
       <button>我是按钮</button>
     </my-slog-cpn>
 
     <!-- 插入自己的组件 -->
     <my-slog-cpn>
+      <text>传入1个我的按钮</text>
       <my-button></my-button>
     </my-slog-cpn>
 

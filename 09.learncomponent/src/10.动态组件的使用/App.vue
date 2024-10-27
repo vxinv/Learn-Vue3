@@ -3,7 +3,8 @@
     <button
         v-for="item in tabs"
         :key="item"
-        :class="{ active: currentTab === item }"
+        :class="{ active: currentTab === item}"
+        class="button"
         @click="itemClick(item)"
     >
       {{ item }}
@@ -74,5 +75,10 @@ export default {
 <style scoped>
 .active {
   color: red;
+}
+
+.button {
+  display: block;
+  margin: 20px;
 }
 </style>

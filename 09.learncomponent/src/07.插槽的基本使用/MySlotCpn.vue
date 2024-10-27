@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="slot">
     <h2>组件开始</h2>
     <slot>
       <i>默认值1</i>
@@ -12,11 +12,12 @@
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {}
 </script>
 
 <style scoped>
-
+.slot {
+  background: #6b778c;
+  margin-bottom: 20px;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>tjx mybutton</button>
+    <button>我的 mybutton</button>
   </div>
 </template>
 
