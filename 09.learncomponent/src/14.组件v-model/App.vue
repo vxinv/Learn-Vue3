@@ -9,26 +9,26 @@
     <!-- 绑定两个v-model -->
     <tjx-input v-model="message" v-model:title="title"></tjx-input>
 
-    <h1>{{message}}</h1>
-    <h2>{{title}}</h2>
+    <h1>{{ message }}</h1>
+    <h2>{{ title }}</h2>
 
-    
   </div>
 </template>
 
 <script>
 import TjxInput from "./TjxInput.vue"
-  export default {
-    data() {
-      return {
-        message: "hello world",
-        title: "dsfsd"
-      }
-    },
-    components: {
-      TjxInput
+
+export default {
+  data() {
+    return {
+      message: "hello world",
+      title: "dsfsd"
     }
+  },
+  components: {
+    TjxInput
   }
+}
 </script>
 
 <style scoped>

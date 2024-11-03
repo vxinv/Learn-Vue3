@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div style="background: #dce9ea">
     <h2>{{message}}</h2>
-    <button @click="changeMessage">修改</button>
+    <button @click="changeMessage">修改本组件</button>
   </div>
 </template>
 
@@ -9,12 +9,12 @@
   export default {
     data() {
       return {
-        message: "1"
+        message: 1
       }
     },
     methods: {
       changeMessage() {
-        this.message = "03"
+        this.message++
       }
     },
     beforeCreate() {

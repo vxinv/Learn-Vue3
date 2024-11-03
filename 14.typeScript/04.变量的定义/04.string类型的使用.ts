@@ -4,6 +4,3 @@ const name = 'tjx'
 const age = 19
 let message3 = `name:${name} age:${age}`
 console.log(message3);
-
-
-export {}

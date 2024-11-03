@@ -1,52 +1,48 @@
 // import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 
 // import Home from '../pages/Home.vue'
 // import About from '../pages/About.vue'
 
 // 配置映射关系
-const routes = [
-  // 默认路由
+const routes = [// 默认路由
   // { path: '/', component: Home},
   // 重定向
-  { path: '/', redirect: '/home' },
-  {
-    path: '/home', name: "home", component: () => {
+  {path: '/', redirect: '/home'}, {
+    path: '/home',
+    name: "home",
+    component: () => {
       return import("../pages/Home.vue") // 路由懒加载：完整写法
     },
-    children: [
-      { path: 'message', component: () => import('../pages/HomeMessage.vue') },
-      { path: 'shops', component: () => import('../pages/HomeShops.vue') },
-    ]
-  },
-  {
-    path: '/about', component: () => import('../pages/About.vue'),
-    meta: {
-      name: 'tjx',
-      age: 18
+    children: [{path: 'message', component: () => import('../pages/HomeMessage.vue')}, {
+      path: 'shops',
+      component: () => import('../pages/HomeShops.vue')
+    },]
+  }, {
+    path: '/about', component: () => import('../pages/About.vue'), meta: {
+      name: 'tjx', age: 18
     }
   }, // 路由懒加载：简写
-  { path: '/user/:username/id/:id', component: () => import('../pages/User.vue') },
-  { path: '/:pathMatch(.*)', component: () => import("../pages/NotFound.vue") },  // 固定写法：'/:pathMatch(.*)'
+  {path: '/user/:username/id/:id', component: () => import('../pages/User.vue')}, {
+    path: '/:pathMatch(.*)',
+    component: () => import("../pages/NotFound.vue")
+  },  // 固定写法：'/:pathMatch(.*)'
 ]
 
 // 创建一个路由对象router
 const router = createRouter({
-  routes,
-  history: createWebHistory()
+  routes, history: createWebHistory()
 })
 
 // 动态添加路由
 const categoryRoute = {
-  path: '/category',
-  component: () => import("../pages/Category.vue")
+  path: '/category', component: () => import("../pages/Category.vue")
 }
 router.addRoute(categoryRoute)
 
 // 给一级路由对象home添加二级路由对象
 router.addRoute('home', {
-  path: 'moment',
-  component: () => import('../pages/HomeMount.vue')
+  path: 'moment', component: () => import('../pages/HomeMount.vue')
 })
 
 // 导航守卫 beforEach
